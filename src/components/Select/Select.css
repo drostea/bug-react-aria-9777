@@ -1,0 +1,134 @@
+.select {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.select label {
+  color: #374151;
+  font-weight: 500;
+}
+
+.select-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  min-width: 160px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #111827;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.select-button[aria-expanded="true"],
+.select-button:focus-visible {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.select-button[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.select-value {
+  flex: 1;
+  text-align: left;
+}
+
+.select-value[data-placeholder] {
+  color: #9ca3af;
+}
+
+.select-icon {
+  width: 16px;
+  height: 16px;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.select-popover {
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  min-width: var(--trigger-width);
+  outline: none;
+  overflow: auto;
+  max-height: 300px;
+  z-index: 10;
+}
+
+.select-list-box {
+  padding: 4px;
+  outline: none;
+}
+
+.select-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: default;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+}
+
+.select-item[data-focused] {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.select-item[data-selected] {
+  font-weight: 600;
+  color: #4338ca;
+}
+
+.select-item[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.select-item-check {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  visibility: hidden;
+}
+
+.select-item[data-selected] .select-item-check {
+  visibility: visible;
+}
+
+.select-section-header {
+  padding: 6px 10px 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.select-description {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.select[data-invalid] .select-button {
+  border-color: #ef4444;
+}
+
+.select-error {
+  font-size: 12px;
+  color: #ef4444;
+}
